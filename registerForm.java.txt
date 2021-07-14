@@ -1,0 +1,100 @@
+package simpleform;
+import java.awt.*;
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+public class SimpleForm extends JFrame{
+        private JPanel contentPane;
+    SimpleForm(){
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setBounds(450, 190, 600,600);
+        setResizable(false);
+        contentPane = new JPanel();
+        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+        setContentPane(contentPane);
+        contentPane.setLayout(null);
+        
+        JLabel l1 = new JLabel("Amity University, Uttar Pradesh");
+        l1.setFont(new Font("Times New Roman", Font.BOLD, 30));
+        l1.setBounds(85, 2, 500, 93);
+        contentPane.add(l1);
+        
+        JLabel l2 = new JLabel("ASET-CSE");
+        l2.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+        l2.setBounds(250, 50, 500, 93);
+        contentPane.add(l2);
+        
+        JLabel l3 = new JLabel("Enrollment No.");
+        l3.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+        l3.setBounds(130, 100, 150, 93);
+        contentPane.add(l3);
+        
+        JLabel l4 = new JLabel("Name");
+        l4.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+        l4.setBounds(130, 140, 150, 93);
+        contentPane.add(l4);
+        
+        JLabel l5 = new JLabel("Section");
+        l5.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+        l5.setBounds(130, 180, 150, 93);
+        contentPane.add(l5);
+        
+        JLabel l6 = new JLabel("Elective-Subject");
+        l6.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+        l6.setBounds(130, 220, 200, 93);
+        contentPane.add(l6);
+        
+        JLabel l7 = new JLabel("Contact-No.");
+        l7.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+        l7.setBounds(130, 300, 200, 93);
+        contentPane.add(l7);
+
+        JLabel l8 = new JLabel("E-mail ID");
+        l8.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+        l8.setBounds(130, 340, 200, 93);
+        contentPane.add(l8);
+                
+        JTextField t1= new JTextField("");
+        t1.setBounds(250,135,200,20);
+        contentPane.add(t1);
+        
+        JTextField t2= new JTextField("");
+        t2.setBounds(250,175,200,20);
+        contentPane.add(t2);
+        
+        String classes[] = {"6CSE1","6CSE2","6CSE3","6CSE4","6CSE5","6CSE6",
+                            "6CSE7","6CSE8","6CSE9","6CSE10","6CSE11","6CSE12","6CSE13",};
+        JComboBox sec = new JComboBox(classes);
+        sec.setBounds(250,215,100,20);
+        contentPane.add(sec);
+        
+        JRadioButton cb1 = new JRadioButton("Networking");
+        JRadioButton cb2 = new JRadioButton("Cloud");
+        JRadioButton cb3 = new JRadioButton("Android App");
+        
+        cb1.setBounds(80,290,150,20);
+        contentPane.add(cb1);
+        
+        cb2.setBounds(230,290,75,20);
+        contentPane.add(cb2);
+        
+        cb3.setBounds(340,290,150,20);
+        contentPane.add(cb3);
+        ButtonGroup G1 = new ButtonGroup();
+        G1.add(cb1);
+        G1.add(cb2);
+        G1.add(cb3);
+        
+        JTextField t3= new JTextField("");
+        t3.setBounds(250,335,200,20);
+        contentPane.add(t3);
+        
+        JTextField t4= new JTextField("");
+        t4.setBounds(250,375,200,20);
+        contentPane.add(t4);     
+        JButton b1 = new JButton("Submit");
+        b1.setBounds(260,430,100,20);
+        contentPane.add(b1);}
+    public static void main(String[] args) {
+        SimpleForm s = new SimpleForm();
+        s.setVisible(true);
+        s.setTitle("REGISTRATION FORM");}}
